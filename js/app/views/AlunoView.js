@@ -40,7 +40,7 @@ class AlunoView extends View {
                 <tfoot>
                     <td>Total de alunos aprovados: ${aluno.turma.filter(alunos => alunos.situacao == 'Aprovado(a)').length}</td>
                     <td>Total de alunos reprovados: ${aluno.turma.filter(alunos => alunos.situacao == 'Reprovado(a)').length}</td>
-                    <td>Média da Turma: ${aluno.turma.map(alunos => alunos.media).reduce((a,b)=> a+b,0)/aluno.turma.length}</td>
+                    <td>Média da Turma: ${aluno.turma.map(alunos => alunos.media).reduce((a,b)=> a+b,0)/aluno.turma.length || 0}</td>
                 </tfoot >
             </table>
         `;
